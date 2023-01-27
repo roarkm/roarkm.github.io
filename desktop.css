@@ -1,0 +1,312 @@
+/* Desktop.css */
+@font-face {
+  font-family: "Computer Modern";
+  src: url('fonts/latin-modern-roman/lmroman10-regular.otf');
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url('fonts/latin-modern-roman/lmroman10-bold.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url('fonts/latin-modern-roman/lmroman10-regular.otf');
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url('fonts/latin-modern-roman/lmroman10-regular.otf');
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+
+body {
+  font-family: "Computer Modern", sans-serif;
+}
+
+/* hack to keep div with internal float from collapsing (google "clearfix" for info) */
+.group:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.pr {
+    margin-right: .5em;
+}
+.group {
+    display: inline-block;
+    clear: both;
+}
+/* start commented backslash hack \*/* html .group { height: 1%; } .group { display: block } /* close commented backslash hack */
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* the "*" selector doesn't apply when declared first (unkown why) */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.download a:hover {
+    color: gray;
+}
+
+.download {
+    text-align: center;
+    margin: 1em 0em 2em 0em;
+}
+
+a:active, a:visited {
+    color: black;
+}
+
+#pageWrap {
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    margin: auto;
+    max-width: 836px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+/********************************* HEADER ********/
+header {
+    background: #EEE;
+    width: 100%;
+    top: 0px;
+    margin: auto;
+    text-align: center;
+    padding: 0.3em 0em 0em 0em;
+    display: block;
+}
+
+#fullMenu {
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+    background: blue;
+}
+
+#fullMenu span {
+    position: relative;
+    bottom: 0px;
+    background: red;
+}
+
+#hamburger {
+    -webkit-border-radius: 0em 0em 0em 0.5em;
+    -moz-border-radius:    0em 0em 0em 0.5em;
+    display: none;
+    font-size: 1.6em;
+    position: fixed;
+    padding: 0% 5% 0% 5%;
+    /*box-shadow: -1px 0px 20px #FFF; */
+    text-decoration: none;
+    right: 0px;
+    top: 0px;
+    background: #EEE;
+}
+
+nav .logo {
+    font-size: .8em;
+}
+
+.logo {
+    font-family: "Trajan Pro", Helvetica, "Times New Roman", Arial, Georgia, serif;
+}
+
+/********************************* END HEADER ****/
+
+/************************************* TITLE *****/
+/* hide all and user media queries to display the proper title */
+#lTitle {
+    display: none;
+}
+#mTitle {
+    display: none;
+}
+#sTitle {
+    display: none;
+}
+.title {
+	  font-family: "Computer Modern";
+    font-size: 2.5em;
+    padding-top: 3px;
+}
+
+/* mWidth 667 <= W <= 735 */
+@media only screen and (min-width: 667px) {
+    #lTitle {
+        display: inline;
+    }
+}
+
+/* mWidth 414 <= W <= 666 */
+@media only screen and (max-width: 666px) and (min-width: 414px)  {
+    #mTitle {
+        display: inline;
+    }
+}
+/* sWidth W <= 413 */
+@media only screen and (max-width: 413px) {
+    #sTitle {
+        display: inline;
+    }
+}
+
+/********************************* END TITLE *****/
+
+/*********************************** POPOVER *****/
+#popOverContainer {
+    display: none;
+    opacity: 0.0;
+    transition: opacity 90ms ease-in;
+}
+
+#popOverPageMask {
+    width: 100%;
+    height: 1200px;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    opacity: 0.3;
+    background: black;
+}
+
+#popOverTxtBG {
+    opacity: 0.6;
+    background: black;
+    position: fixed;
+}
+
+#popOver, #popOverTxtBG {
+    position: fixed;
+    top: 10%;
+    height: 80%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    -webkit-border-radius: 0.9em 0.9em 0.5em 0.5em;
+    -moz-border-radius:    0.9em 0.9em 0.5em 0.5em;
+/*    box-shadow: 0.4em 0.4em 0.9em #444; */
+}
+#popOver a {
+    background: #EEE;
+    opacity: 1.0;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    padding: 8px 0px 8px 0px;
+    font-size: 1.5em;
+}
+
+#popOver a:first-child {
+    -webkit-border-radius: 0.5em 0.5em 0.0em 0.0em;
+    -moz-border-radius:    0.5em 0.5em 0.0em 0.0em;
+}
+
+/******************************* END POPOVER *****/
+
+/************************************* RESUME ***/
+#resume {
+    height: 100%;
+    position: relative;
+}
+
+#resumeInner p {
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+#resumeInner h2 {
+    font-size: 1.5em;
+    margin-top: .4em;
+    border-bottom: 1px solid grey;
+}
+
+#resumeInner .details {
+    font-size: 1em;
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+#resumeInner li {
+    list-style: none;
+}
+
+#resume .date {
+    float: right;
+}
+
+#resumeInner .skills li {
+    float: left;
+    list-style: circle inside;
+    white-space: nowrap;
+    margin: 0.1em 0.4em 0.1em 0.4em;
+}
+
+#resumeInner ul {
+    padding: 0.2em;
+}
+
+#resumeInner .experience li, #resumeInner .education li {
+    margin-bottom: 0.1em;
+    padding-left: 0.8em;
+}
+
+#sectionContainer {
+    position: relative;
+}
+
+#skillsContainer {
+    display: inline-block;
+}
+
+#toolsContainer {
+    display: inline-block;
+}
+
+.listBulletHiderPositioner {
+    position: relative;
+}
+
+.listBulletHider {
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 1.5em;
+    bottom: 0px;
+    margin-left: 0.1em;
+    width: 1.3em;
+    height: auto;
+}
+
+#resumeInner p {
+    text-indent: 1em;
+}
+
+@media only screen and (max-width: 320px) {
+    /* trying to get the date on a new line */
+    #resumeInner .institution {
+        float: left;
+    }
+    #resumeInner .date {
+        float: none;
+    }
+}
+
+/********************************* END RESUME ***/
+
