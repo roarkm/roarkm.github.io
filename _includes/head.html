@@ -32,4 +32,18 @@
   {% endif %}
 
   {%- include custom_head.html -%}
+
+<!--[> for mathjax support <]-->
+{% if page.usemathjax %}
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: { autoNumber: "AMS" }
+      }
+      jax: ["input/TeX", "output/CommonHTML"],
+    });
+  </script>
+  <script type="text/javascript" async src="assets/js/tex-chtml.js"></script>
+{% endif %}
+
 </head>
