@@ -12,9 +12,19 @@ navbar_entries:
     url: assets/files/mroark_resume.pdf
 
 project_entries:
-  - title: NN Verification
+  #- title: Formal Verification
+    #url: verification
+    #desc: Intro to Optimization Based Verification
+    #highlight: WIP
+
+  - title: Verification Code
     url: https://github.com/roarkm/math-898
-    desc: Source code related to my thesis in formal NN verification
+    desc: Implementation of 3 NN verification algorithms
+    highlight: WIP
+
+  - title: Time Series
+    url: https://github.com/roarkm/time-series-analysis/blob/master/notebooks/feature-exploration.ipynb
+    desc: EDA for time series data
     highlight: WIP
 
 old_project_entries:

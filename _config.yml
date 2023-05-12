@@ -1,8 +1,9 @@
-title: "roarkm.github.io"
+title: "Michael Roark - SWE/MLE"
 author: Michael Roark
 url: https://roarkm.github.io # root address of the site
 description: > # description of the site (multiple lines allowed)
-  This is my projects page. There are many like it, but this one is mine.
+  I'm a software developer interested in all things ML. I recently finished my MA in Mathematics
+  with an emphasis in ML theory! Here are just a few of my past or ongoing projects.
 
 permalink: /:slug
 
@@ -35,7 +36,7 @@ theme_config:
   show_tags: true # show tags in a blog posts
   # options for "home" page
   home:
-    title_projects: Portfolio
+    title_projects: Projects
     title_misc_list: Details
     title_blog: Blog
     title_old_projects: Old Projects
